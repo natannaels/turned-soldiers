@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://b13wykqb3o00r"]
+
+[ext_resource type="Script" uid="uid://3xeh6ci2b6lr" path="res://Entities/Data/character_data.gd" id="1_p8uwl"]
+
+[resource]
+script = ExtResource("1_p8uwl")
+player = false
+metadata/_custom_type_script = "uid://3xeh6ci2b6lr"

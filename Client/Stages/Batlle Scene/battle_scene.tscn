@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dge7lr73stj8b"]
+
+[ext_resource type="Texture2D" uid="uid://hrc5v4hjpgj1" path="res://Stages/Batlle Scene/Background.png" id="1_6a8yb"]
+[ext_resource type="PackedScene" uid="uid://3n4uc5kf4bo4" path="res://Entities/UI/Action Menu/action_menu.tscn" id="2_5caun"]
+[ext_resource type="PackedScene" uid="uid://bclystafsf82j" path="res://Entities/Player/Soldier/battle_soldier.tscn" id="2_p7c5x"]
+[ext_resource type="PackedScene" uid="uid://cshcws2qv7n47" path="res://Entities/Enemies/Slime/slime.tscn" id="3_4usuk"]
+
+[node name="Battle Scene" type="Node2D" unique_id=465830613]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1332188229]
+texture = ExtResource("1_6a8yb")
+
+[node name="Camera2D" type="Camera2D" parent="Background" unique_id=828469699]
+
+[node name="Entities Position" type="Node2D" parent="." unique_id=169961230]
+
+[node name="BattleSoldier" parent="Entities Position" unique_id=1819563460 instance=ExtResource("2_p7c5x")]
+position = Vector2(-239.99998, 0)
+
+[node name="Slime" parent="Entities Position" unique_id=1642435863 instance=ExtResource("3_4usuk")]
+position = Vector2(209.99998, 0)
+
+[node name="Action Menu" parent="." unique_id=1498065647 instance=ExtResource("2_5caun")]
+offset_left = -228.0
+offset_top = -250.0
+offset_right = -188.0
+offset_bottom = -210.0

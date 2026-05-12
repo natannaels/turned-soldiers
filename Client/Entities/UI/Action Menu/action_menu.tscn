@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://3n4uc5kf4bo4"]
+
+[ext_resource type="FontFile" uid="uid://ervjj7pb1gm2" path="res://Assets/Fonts/NESCyrillic.ttf" id="1_g2d06"]
+[ext_resource type="Script" uid="uid://bddpvlqbhe2yq" path="res://Entities/UI/Action Menu/action_menu.gd" id="1_nodt7"]
+
+[node name="Action Menu" type="Control" unique_id=1498065647]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2, 2)
+script = ExtResource("1_nodt7")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1221040761]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=2051374999]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=677353035]
+layout_mode = 2
+
+[node name="Attack_Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=2052051187]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_g2d06")
+text = "ATACAR"
+
+[node name="Block_Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1091115966]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_g2d06")
+text = "DEFENDER"
+
+[node name="Run_Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=2063198136]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_g2d06")
+text = "FUGIR"
+
+[connection signal="button_down" from="PanelContainer/MarginContainer/VBoxContainer/Attack_Button" to="." method="_on_attack_button_button_down"]
+[connection signal="button_down" from="PanelContainer/MarginContainer/VBoxContainer/Block_Button" to="." method="_on_block_button_button_down"]
+[connection signal="button_down" from="PanelContainer/MarginContainer/VBoxContainer/Run_Button" to="." method="_on_run_button_button_down"]
